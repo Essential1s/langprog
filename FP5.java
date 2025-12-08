@@ -7,6 +7,16 @@ class Kurs {
 		return plan;
 	}
 }
+
+class Kurs2 {
+	static List<String> replan (List <String> plan, StringnewChapt, String beforeChapt) {
+		int newChaptIndex = plan.indexOf(beforeChapt);
+		List<String> replanned = new ArrayList<>(plan);
+		replanned.add(newChaptIndex, newChapt);
+		return replanned;
+	}
+}
+
 class FP5 {
 	public static void main(String[] args) {
 		List<String> planA = new ArrayList();
@@ -19,3 +29,4 @@ class FP5 {
 
 	}
 }
+
