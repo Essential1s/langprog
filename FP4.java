@@ -38,33 +38,28 @@ class FP4 {
 		List<String> l1 = new ArrayList<>();
 		l1 = list1.addPerson(l1, "Ринат");
 		System.out.println("Размер чаевых для l1: " + list1.getTPercentage(l1));
-		List<String> l2 = new ArrayList<>();
-		for (int i=0; i<10; i++)
-			l2 = list1.addPerson(l1, "Юрий");
+		List<String> l2 = l1;
+		l2 = list1.addPerson(l1, "Юрий");
 		System.out.println("Размер чаевых для l1: " + list1.getTPercentage(l2));
-		//Тестирование чистой функции getTPercentage() для трёх вариантов :
-		List<String> l3 = new ArrayList<>();
-		System.out.println("\n проверка пустого списка");
 		
-		if (List1.getTPercentage(l3) == 0)
-			System.out.println("работает правильно");
-		else
-			System.out.println("Ошибка");                        
-		//список от 1 до 5 человек
+		List<String> l3 = new ArrayList<>();
+		System.out.println("\nПроверка пустого списка...");
 
-		System.out.println("\n проверка списка l1");
-		if (List1.getTPercentage(l1) == 10)
-			System.out.println("работает правильно");
+		if (list1.getTPercentage(l3) == 0)
+			System.out.println("Работает");
+		else
+			System.out.println("Ошибка");
+		
+		System.out.println("\nПроверка l1...");
+		if (list1.getTPercentage(l1) == 10)
+			System.out.println("Работает");
 		else
 			System.out.println("Ошибка");
 
-		//список больше 5 человек
-		
-		System.out.println("\n проверка списка l2");
-		if (List1.getTPercentage(l2) == 20)
-			System.out.println("работает правильно");
+		System.out.println("\nПроверка l2...");
+		if (list1.getTPercentage(l2) == 20)
+			System.out.println("Работает");
 		else
-			System.out.println("Ошибка");                        
-
+			System.out.println("Ошибка");
 	}
 }
